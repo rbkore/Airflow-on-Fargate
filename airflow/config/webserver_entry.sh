@@ -2,7 +2,7 @@
 
 set -Eeuxo pipefail
 
-airflow initdb
+airflow db init
 sleep 5
 
 airflow create_user -r Admin -u admin -f FirstName -l LastName -p ${ADMIN_PASS} -e admin@test.com
